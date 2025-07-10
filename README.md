@@ -1,144 +1,37 @@
-🧹 CodeSanitizer
- 
-Ever felt you copied code from ChatGPT and were too lazy to remove every comment? CodeSanitizer is your VS Code savior! It zaps debug code like console.log, print, and comments, with smart Git integration to keep your commits clean. 🚀
+# 🧹 CodeSanitizer
 
-✨ Features
+> *Clean code, made simple.*  
+Ever felt you copied code from ChatGPT and were too lazy to remove every comment?  
+**CodeSanitizer** is your VS Code savior! It zaps debug code like `console.log`, `print`, and comments — with **smart Git integration** to keep your commits clean. 🚀
 
-Highlight Debug Code 🔍: Toggle highlights for debug statements and comments (Ctrl+Alt+H).
-Clean Code 🧼: Strip debug code from active files (Ctrl+Alt+R).
-Undo Cleaning 🔄: Revert cleaning mistakes.
-Git Integration 🌿:
-Clean staged files before committing.
-Add a pre-commit hook to check for debug code.
-Clean modified files with staging options.
-View debug code stats in modified files.
+---
 
+## 🌲✨ Features
 
-Smart Repo Detection 📂: Finds Git repositories automatically.
-Supported Languages: JavaScript, TypeScript, Python, Java, C/C++, PHP, Ruby.
+### 🟢 Highlight Debug Code 🔍
+Toggle highlights for debug statements and comments  
+`Ctrl+Alt+H`
 
+### 🟢 Clean Code 🧼  
+Strip debug code from active files  
+`Ctrl+Alt+R`
 
-🚀 Installation
+### 🟢 Undo Cleaning 🔄  
+Revert cleaning mistakes easily
 
-Open VS Code Extensions (Ctrl+Shift+X).
-Search for CodeSanitizer (once published).
-Click Install and reload.
+### 🟢 Git Integration 🌿  
+- Clean **staged files** before committing  
+- Add a **pre-commit hook** to check for debug code  
+- Clean **modified files** with staging options  
+- View **debug code stats** in modified files  
 
-Local Install:
-vsce package
-code --install-extension codesanitizer-0.0.1.vsix
+### 🟢 Smart Repo Detection 📂  
+Auto-detects Git repositories in your workspace
 
+### 🟢 Supported Languages  
+- JavaScript / TypeScript  
+- Python / Java  
+- C / C++ / PHP / Ruby
 
-🛠️ Usage
+---
 
-Keybindings:
-
-Ctrl+Alt+H: Highlight debug code.
-Ctrl+Alt+R: Clean active file.
-Ctrl+Alt+G: Access Git features (Command Palette).
-
-
-Commands (Ctrl+Shift+P):
-
-CodeSanitizer: Toggle Highlight
-CodeSanitizer: Clean All
-CodeSanitizer: Undo Clean
-CodeSanitizer: Clean Staged
-CodeSanitizer: Setup Pre-Commit Hook
-CodeSanitizer: Clean Before Commit
-CodeSanitizer: Show Git Status
-
-
-
-Example:
-
-Open script.js with console.log('Debug').
-Press Ctrl+Alt+H to highlight.
-Press Ctrl+Alt+R to clean.
-Run Clean Staged before committing.
-
-
-📋 Supported Files
-
-
-
-Extension
-Language
-Debug Patterns
-
-
-
-.js, .jsx
-JavaScript
-console.log, //, /* */
-
-
-.ts, .tsx
-TypeScript
-console.log, //, /* */
-
-
-.py
-Python
-print, #, ''', """
-
-
-.java
-Java
-System.out.println, //, /* */
-
-
-.cpp, .c
-C/C++
-printf, std::cout, //, /* */
-
-
-.php
-PHP
-echo, //, /* */
-
-
-.rb
-Ruby
-puts, #
-
-
-
-🔧 Setup
-
-Install Git (2.50+ recommended).
-Ensure a Git repository exists in your workspace.
-Optional: Set git.path in VS Code settings:"git.path": "/path/to/git"
-
-
-
-
-🐛 Troubleshooting
-
-Git errors: Verify Git installation and git.path.
-Hook issues: Ensure .git/hooks/pre-commit is executable (chmod +x).
-No repo: Open a folder with a .git directory.
-Check Output panel (“CodeSanitizer”) for logs.
-
-Report issues on GitHub.
-
-🤝 Contributing
-
-Fork the repo.
-Clone and setup:git clone https://github.com/your-username/codesanitizer.git
-npm install
-
-
-Test in VS Code’s Extension Development Host.
-Submit a pull request.
-
-
-📜 License
-MIT License - Free to use and modify.
-
-🌟 Acknowledgments
-
-Built for developers tired of debug clutter. ❤️
-Powered by VS Code and Git communities.
-
-Clean code, made simple with CodeSanitizer! 🧹✨
