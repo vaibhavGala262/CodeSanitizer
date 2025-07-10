@@ -1,0 +1,97 @@
+{
+  "name": "codesanitizer",
+  "displayName": "Code Sanitizer",
+  "description": "✨ Effortlessly clean up your code by removing console.log, debug prints, and comments — with just a click.",
+  "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:codesanitizer.toggleHighlight",
+    "onCommand:codesanitizer.cleanAll",
+    "onCommand:codesanitizer.undoClean"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codesanitizer.toggleHighlight",
+        "title": "Toggle Highlight Logs/Comments"
+      },
+      {
+        "command": "codesanitizer.cleanAll",
+        "title": "Remove Logs/Comments"
+      },
+      {
+        "command": "codesanitizer.undoClean",
+        "title": "Undo Last Clean"
+      },
+      {
+        "command": "codesanitizer.cleanStaged",
+        "title": "Clean Staged Files"
+      },
+      {
+        "command": "codesanitizer.setupPreCommitHook",
+        "title": "Setup Pre-commit Hook"
+      },
+      {
+        "command": "codesanitizer.cleanBeforeCommit",
+        "title": "Clean Before Commit"
+      },
+      {
+        "command": "codesanitizer.showGitStatus",
+        "title": "Show Git Clean Status"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "codesanitizer.toggleHighlight",
+        "key": "ctrl+alt+h",
+        "mac": "cmd+alt+h"
+      },
+      {
+        "command": "codesanitizer.cleanAll",
+        "key": "ctrl+alt+r",
+        "mac": "cmd+alt+r"
+      },
+      {
+        "command": "codesanitizer.undoClean",
+        "key": "ctrl+alt+z",
+        "mac": "cmd+alt+z"
+      },
+      {
+        "command": "codesanitizer.cleanStaged",
+        "key": "ctrl+alt+g",
+        "mac": "cmd+alt+g"
+      },
+      {
+        "command": "codesanitizer.cleanBeforeCommit",
+        "key": "ctrl+alt+shift+g",
+        "mac": "cmd+alt+shift+g"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.101.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
